@@ -13,6 +13,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    
+        let offers = MarketingChannel.decodeOffers()
+        print(offers)
     }
 
 

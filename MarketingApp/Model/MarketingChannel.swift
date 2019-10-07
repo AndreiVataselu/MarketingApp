@@ -26,7 +26,7 @@ struct MarketingChannel: Decodable {
         
     }
     
-    static func initialize() -> [MarketingChannel]? {
+    static func decodeOffers() -> [MarketingChannel]? {
         guard let url = Bundle.main.url(forResource: "Offers", withExtension: "json"),
             let json = try? Data(contentsOf: url) else {
             return nil
