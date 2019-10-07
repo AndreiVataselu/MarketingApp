@@ -8,14 +8,32 @@
 
 import Foundation
 
+enum Indicator: String, Decodable {
+    case locations = "Locatii"
+    case age = "Varsta"
+    case sex = "Sex"
+    case languages = "Limbi cunoscute"
+    case events = "Evenimente"
+    case company = "Companie"
+    case industry = "Industrie"
+    case experience = "Experienta"
+    case education = "Educatie"
+    case technology = "Tehnologie"
+    case interests = "Interese"
+    case deviceType = "Tipuri de dispozitiv"
+    case keywords = "Cuvinte, fraze cheie"
+    case similarProducts = "Produse/servicii similare"
+    case links = "Link-uri"
+}
 
 struct MarketingChannel: Decodable {
     let name: String
     let iconLink: String
     let packages: [Offer]
+    let indicators: [Indicator]
     
     enum CodingKeys: String, CodingKey {
-        case name, iconLink = "icon", packages
+        case name, iconLink = "icon", packages, indicators
     }
     
     init(from decoder: Decoder) throws {
@@ -23,6 +41,7 @@ struct MarketingChannel: Decodable {
         name = try container.decode(String.self, forKey: .name)
         iconLink = try container.decode(String.self, forKey: .iconLink)
         packages = try container.decode([Offer].self, forKey: .packages)
+        indicators = try container.decode([Indicator].self, forKey: .indicators)
         
     }
     

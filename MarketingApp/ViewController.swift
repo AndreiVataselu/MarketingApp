@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     
         let offers = MarketingChannel.decodeOffers()
-        print(offers)
+        offers?.forEach { print($0.indicators) }
     }
 
 

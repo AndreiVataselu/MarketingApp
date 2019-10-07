@@ -2,6 +2,13 @@
    {
       "name":"Facebook",
       "icon":"tobeadded",
+      "indicators": [
+      "Locatii",
+      "Varsta",
+      "Sex",
+      "Limbi cunoscute",
+      "Evenimente"
+      ],
       "packages":[
          {
             "price":75,
@@ -62,6 +69,15 @@
    {
       "name":"LinkedIn",
       "icon":"tobeadded",
+      "indicators": [
+      "Locatii",
+      "Varsta",
+      "Sex",
+      "Companie",
+      "Industrie",
+      "Experienta",
+      "Educatie"
+      ],
       "packages":[
          {
             "price":60,
@@ -111,6 +127,14 @@
    {
       "name":"Twitter",
       "icon":"tobeadded",
+      "indicators": [
+      "Locatii",
+      "Varsta",
+      "Sex",
+      "Limbi cunoscute",
+      "Evenimente",
+      "Tehnologie"
+      ],
       "packages":[
          {
             "price":80,
@@ -163,6 +187,13 @@
    {
       "name":"Instagram",
       "icon":"tobeadded",
+      "indicators":[
+      "Locatii",
+      "Varsta",
+      "Sex",
+      "Limbi cunoscute",
+      "Interese"
+      ],
       "packages":[
          {
             "price":80,
@@ -223,6 +254,14 @@
    {
       "name":"Google AdWords",
       "icon":"tobeadded",
+      "indicators": [
+      "Locatii",
+      "Varsta",
+      "Sex",
+      "Tipuri de dispozitiv",
+      "Cuvinte, fraze cheie",
+      "Produse/servicii similare"
+      ],
       "packages":[
          {
             "price":90,
@@ -263,6 +302,11 @@
    {
       "name":"SEO",
       "icon":"tobeadded",
+      "indicators":[
+      "Industrie",
+      "Cuvinte, fraze cheie",
+      "Link-uri"
+      ],
       "packages":[
          {
             "price":110,
