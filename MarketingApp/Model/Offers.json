@@ -1,0 +1,325 @@
+[
+   {
+      "name":"Facebook",
+      "icon":"tobeadded",
+      "packages":[
+         {
+            "price":75,
+            "services":[
+               "1 pagina facebook",
+               "8 optimizari",
+               "Setare campanii",
+               "Administrare si optimizare",
+               "Consultanta email",
+               "Rapoarte lunare"
+            ]
+         },
+         {
+            "price":100,
+            "services":[
+               "1-3 reclame",
+               "8 optimizari",
+               "Setare campanii",
+               "Administrare si optimizare",
+               "Consultanta email",
+               "Rapoarte lunare",
+               "Instalare Analytics",
+               "Cod monitorizare conversii"
+            ]
+         },
+         {
+            "price":140,
+            "services":[
+               "3-8 reclame",
+               "12 optimizari",
+               "Setare campanii",
+               "Administrare si optimizare",
+               "Consultanta email",
+               "Rapoarte lunare",
+               "Instalare Analytics",
+               "Cod monitorizare conversii",
+               "Consultanta pagina de destinatie"
+            ]
+         },
+         {
+            "price":200,
+            "services":[
+               "8-15 reclame",
+               "20 optimizari",
+               "Setare campanii",
+               "Administrare si optimizare",
+               "Consultanta email",
+               "Rapoarte lunare",
+               "Instalare Analytics",
+               "Cod monitorizare conversii",
+               "Consultanta pagini de destinatie",
+               "Consultare telefonica",
+               "Remarketing"
+            ]
+         }
+      ]
+   },
+   {
+      "name":"LinkedIn",
+      "icon":"tobeadded",
+      "packages":[
+         {
+            "price":60,
+            "services":[
+               "1-2 reclame",
+               "Setare campanii",
+               "Administrare si optimizare",
+               "Consultanta email"
+            ]
+         },
+         {
+            "price":90,
+            "services":[
+               "1-3 reclame",
+               "Setare campanii",
+               "Administrare si optimizare",
+               "Consultanta email",
+               "Rapoarte lunare"
+            ]
+         },
+         {
+            "price":150,
+            "services":[
+               "5-8 reclame",
+               "Setare campanii",
+               "Administrare si optimizare",
+               "Consultanta email",
+               "Monitorizare",
+               "Rapoarte lunare"
+            ]
+         },
+         {
+            "price":180,
+            "services":[
+               "8-10 reclame",
+               "Setare campanii",
+               "Administrare si optimizare",
+               "Consultanta email",
+               "Monitorizare",
+               "Rapoarte lunare",
+               "Analiza linkuri",
+               "Consultanta telefonica"
+            ]
+         }
+      ]
+   },
+   {
+      "name":"Twitter",
+      "icon":"tobeadded",
+      "packages":[
+         {
+            "price":80,
+            "services":[
+               "1-5 reclame",
+               "Setare campanii",
+               "Licitare in functie de scopul campaniei",
+               "Creeare de Tweet-uri",
+               "Consultanta email"
+            ]
+         },
+         {
+            "price":120,
+            "services":[
+               "5-10 reclame",
+               "Setare campanii",
+               "Licitare in functie de scopul campaniei",
+               "Creeare de Tweet-uri",
+               "Consultanta email",
+               "Administrare si optimizare"
+            ]
+         },
+         {
+            "price":170,
+            "services":[
+               "5-10 reclame",
+               "Setare campanii",
+               "Licitare in functie de scopul campaniei",
+               "Creeare de Tweet-uri",
+               "Consultanta email",
+               "Administrare si optimizare",
+               "Rapoarte lunare"
+            ]
+         },
+         {
+            "price":250,
+            "services":[
+               "5-10 reclame",
+               "Setare campanii",
+               "Licitare in functie de scopul campaniei",
+               "Creeare de Tweet-uri",
+               "Consultanta email",
+               "Administrare si optimizare",
+               "Rapoarte lunare",
+               "Consultanta telefonica"
+            ]
+         }
+      ]
+   },
+   {
+      "name":"Instagram",
+      "icon":"tobeadded",
+      "packages":[
+         {
+            "price":80,
+            "services":[
+               "1 reclama",
+               "Stabilire scop campanie",
+               "Setare campanie",
+               "Definirea formatului",
+               "Realizarea design-ului campaniei",
+               "Consultanta email"
+            ]
+         },
+         {
+            "price":130,
+            "services":[
+               "1-4 reclame",
+               "2 optimizari",
+               "Stabilire scop campanie",
+               "Setare campanie",
+               "Definirea formatului",
+               "Realizarea design-ului campaniei",
+               "Consultanta email",
+               "Analiza campaniei"
+            ]
+         },
+         {
+            "price":180,
+            "services":[
+               "5-8 reclame",
+               "4 optimizari",
+               "Stabilire scop campanie",
+               "Setare campanie",
+               "Definirea formatului",
+               "Realizarea design-ului campaniei",
+               "Testarea campaniei",
+               "Analiza campaniei",
+               "Consultanta email"
+            ]
+         },
+         {
+            "price":270,
+            "services":[
+               "10-12 reclame",
+               "8 optimizari",
+               "Stabilire scop campanie",
+               "Setare campanie",
+               "Definirea formatului",
+               "Realizarea design-ului campaniei",
+               "Testarea campaniei",
+               "Analiza campaniei",
+               "Monitorizare",
+               "Consultanta email",
+               "Consultanta telefonica"
+            ]
+         }
+      ]
+   },
+   {
+      "name":"Google AdWords",
+      "icon":"tobeadded",
+      "packages":[
+         {
+            "price":90,
+            "services":[
+               "O optimizare",
+               "Definire tip campanie",
+               "Setare campanie",
+               "Crearea continutului",
+               "Consultanta email"
+            ]
+         },
+         {
+            "price":150,
+            "services":[
+               "3 optimizari",
+               "Definire tip campanie",
+               "Setare campanie",
+               "Crearea continutului",
+               "Administrare si monitorizare",
+               "Consultanta email"
+            ]
+         },
+         {
+            "price":230,
+            "services":[
+               "5 optimizari",
+               "Definire tip campanie",
+               "Setare campanie",
+               "Crearea continutului",
+               "Administrare si monitorizare",
+               "Rapoarte lunare",
+               "Consultanta email",
+               "Consultanta telefonica"
+            ]
+         }
+      ]
+   },
+   {
+      "name":"SEO",
+      "icon":"tobeadded",
+      "packages":[
+         {
+            "price":110,
+            "services":[
+               "Stabilire scop",
+               "Cercetarea pietei si competitiei",
+               "Cercetare cuvinte cheie utilizate",
+               "Analiza continut",
+               "SEO local",
+               "Consultanta email"
+            ]
+         },
+         {
+            "price":180,
+            "services":[
+               "Stabilire scop",
+               "Cercetarea pietei si competitiei",
+               "Cercetare cuvinte cheie utilizate",
+               "Analiza continut",
+               "Analiza link-uri",
+               "SEO local",
+               "Stabilire back link",
+               "Consultanta email"
+            ]
+         },
+         {
+            "price":270,
+            "services":[
+               "Stabilire scop",
+               "Cercetarea pietei si competitiei",
+               "Cercetare cuvinte cheie utilizate",
+               "Analiza continut",
+               "Analiza link-uri",
+               "SEO local",
+               "Optimizarea site-ului",
+               "Stabilire back link",
+               "Analiza campaniei",
+               "Consultanta email"
+            ]
+         },
+         {
+            "price":320,
+            "services":[
+               "Stabilire scop",
+               "Cercetarea pietei si competitiei",
+               "Cercetare cuvinte cheie utilizate",
+               "Analiza continut",
+               "Analiza link-uri",
+               "SEO local",
+               "Audit SEO",
+               "Optimizarea site-ului",
+               "Stabilire back link",
+               "Analiza campaniei",
+               "Consultanta email",
+               "Cercetarea telefonica"
+            ]
+         }
+      ]
+   }
+]
