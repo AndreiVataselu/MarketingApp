@@ -7,27 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F15CC73A234BC8450059725E /* GenericTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15CC739234BC8450059725E /* GenericTextField.swift */; };
 		F1FDFD28234BA1C3000D9584 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FDFD27234BA1C3000D9584 /* AppDelegate.swift */; };
 		F1FDFD2A234BA1C3000D9584 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FDFD29234BA1C3000D9584 /* SceneDelegate.swift */; };
-		F1FDFD2C234BA1C3000D9584 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FDFD2B234BA1C3000D9584 /* ViewController.swift */; };
 		F1FDFD2F234BA1C3000D9584 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1FDFD2D234BA1C3000D9584 /* Main.storyboard */; };
 		F1FDFD31234BA1C7000D9584 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1FDFD30234BA1C7000D9584 /* Assets.xcassets */; };
 		F1FDFD34234BA1C7000D9584 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1FDFD32234BA1C7000D9584 /* LaunchScreen.storyboard */; };
 		F1FDFD3D234BA1F6000D9584 /* Offers.json in Resources */ = {isa = PBXBuildFile; fileRef = F1FDFD3C234BA1F6000D9584 /* Offers.json */; };
 		F1FDFD3F234BA325000D9584 /* MarketingChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FDFD3E234BA325000D9584 /* MarketingChannel.swift */; };
+		F1FDFD42234BBA37000D9584 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FDFD41234BBA37000D9584 /* UIViewControllerExt.swift */; };
+		F1FDFD46234BBC31000D9584 /* CompanyNameInputPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FDFD45234BBC31000D9584 /* CompanyNameInputPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F15CC739234BC8450059725E /* GenericTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTextField.swift; sourceTree = "<group>"; };
 		F1FDFD24234BA1C3000D9584 /* MarketingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarketingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1FDFD27234BA1C3000D9584 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1FDFD29234BA1C3000D9584 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F1FDFD2B234BA1C3000D9584 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F1FDFD2E234BA1C3000D9584 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F1FDFD30234BA1C7000D9584 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1FDFD33234BA1C7000D9584 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F1FDFD35234BA1C7000D9584 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1FDFD3C234BA1F6000D9584 /* Offers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Offers.json; sourceTree = "<group>"; };
 		F1FDFD3E234BA325000D9584 /* MarketingChannel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketingChannel.swift; sourceTree = "<group>"; };
+		F1FDFD41234BBA37000D9584 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
+		F1FDFD45234BBC31000D9584 /* CompanyNameInputPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyNameInputPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F15CC738234BC7F50059725E /* Generic Components */ = {
+			isa = PBXGroup;
+			children = (
+				F15CC739234BC8450059725E /* GenericTextField.swift */,
+			);
+			path = "Generic Components";
+			sourceTree = "<group>";
+		};
 		F1FDFD1B234BA1C3000D9584 = {
 			isa = PBXGroup;
 			children = (
@@ -60,10 +72,12 @@
 		F1FDFD26234BA1C3000D9584 /* MarketingApp */ = {
 			isa = PBXGroup;
 			children = (
+				F15CC738234BC7F50059725E /* Generic Components */,
+				F1FDFD44234BBBB9000D9584 /* Views */,
+				F1FDFD40234BBA1A000D9584 /* Extensions */,
 				F1FDFD3B234BA1EC000D9584 /* Model */,
 				F1FDFD27234BA1C3000D9584 /* AppDelegate.swift */,
 				F1FDFD29234BA1C3000D9584 /* SceneDelegate.swift */,
-				F1FDFD2B234BA1C3000D9584 /* ViewController.swift */,
 				F1FDFD2D234BA1C3000D9584 /* Main.storyboard */,
 				F1FDFD30234BA1C7000D9584 /* Assets.xcassets */,
 				F1FDFD32234BA1C7000D9584 /* LaunchScreen.storyboard */,
@@ -79,6 +93,22 @@
 				F1FDFD3E234BA325000D9584 /* MarketingChannel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F1FDFD40234BBA1A000D9584 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F1FDFD41234BBA37000D9584 /* UIViewControllerExt.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F1FDFD44234BBBB9000D9584 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F1FDFD45234BBC31000D9584 /* CompanyNameInputPage.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,9 +184,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1FDFD3F234BA325000D9584 /* MarketingChannel.swift in Sources */,
-				F1FDFD2C234BA1C3000D9584 /* ViewController.swift in Sources */,
 				F1FDFD28234BA1C3000D9584 /* AppDelegate.swift in Sources */,
+				F1FDFD42234BBA37000D9584 /* UIViewControllerExt.swift in Sources */,
 				F1FDFD2A234BA1C3000D9584 /* SceneDelegate.swift in Sources */,
+				F1FDFD46234BBC31000D9584 /* CompanyNameInputPage.swift in Sources */,
+				F15CC73A234BC8450059725E /* GenericTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
