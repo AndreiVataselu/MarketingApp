@@ -14,6 +14,7 @@
 		F1FDFD31234BA1C7000D9584 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1FDFD30234BA1C7000D9584 /* Assets.xcassets */; };
 		F1FDFD34234BA1C7000D9584 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1FDFD32234BA1C7000D9584 /* LaunchScreen.storyboard */; };
 		F1FDFD3D234BA1F6000D9584 /* Offers.json in Resources */ = {isa = PBXBuildFile; fileRef = F1FDFD3C234BA1F6000D9584 /* Offers.json */; };
+		F1FDFD3F234BA325000D9584 /* MarketingChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FDFD3E234BA325000D9584 /* MarketingChannel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		F1FDFD33234BA1C7000D9584 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F1FDFD35234BA1C7000D9584 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1FDFD3C234BA1F6000D9584 /* Offers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Offers.json; sourceTree = "<group>"; };
+		F1FDFD3E234BA325000D9584 /* MarketingChannel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketingChannel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				F1FDFD3C234BA1F6000D9584 /* Offers.json */,
+				F1FDFD3E234BA325000D9584 /* MarketingChannel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1FDFD3F234BA325000D9584 /* MarketingChannel.swift in Sources */,
 				F1FDFD2C234BA1C3000D9584 /* ViewController.swift in Sources */,
 				F1FDFD28234BA1C3000D9584 /* AppDelegate.swift in Sources */,
 				F1FDFD2A234BA1C3000D9584 /* SceneDelegate.swift in Sources */,
