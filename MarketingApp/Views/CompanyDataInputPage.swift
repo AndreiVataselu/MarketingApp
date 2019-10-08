@@ -12,6 +12,10 @@ class CompanyDataInputPage: UIViewController {
     
     @IBOutlet private weak var employeesContainer: UIView!
     @IBOutlet private weak var buttonContainer: UIView!
+    @IBOutlet private weak var companyNameLabel: UILabel!
+    @IBOutlet private weak var companyEmployeesCount: UILabel!
+    
+    @IBOutlet private weak var nextButton: UIButton!
     
     @IBOutlet private weak var companyNameTF: GenericTextField!
     @IBOutlet private weak var companyEmployeesTF: GenericTextField!
@@ -28,9 +32,14 @@ class CompanyDataInputPage: UIViewController {
     }
     
     @IBAction private func nextButtonPressed(_ sender: UIButton) {
+        guard let companyName = companyNameTF.text,
+            let employeesCount = companyEmployeesTF.text,
+            !companyName.isEmpty,
+            !employeesCount.isEmpty else {
+            return
+        }
         
     }
-    
 }
 
 
@@ -40,12 +49,21 @@ extension CompanyDataInputPage: UITextFieldDelegate {
             return
         }
         
-        textField.borderColor = .black
+        companyNameLabel.textColor = textField == companyNameTF ? .lime : .black
+        companyEmployeesCount.textColor = textField == companyEmployeesTF ? .lime : .black
+        
+        textField.borderColor = UIColor.lime
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         guard let textField = textField as? GenericTextField else {
             return
+        }
+        
+        if textField == companyNameTF {
+            companyNameLabel.textColor = .black
+        } else {
+            companyEmployeesCount.textColor = .black
         }
         
         textField.borderColor = .lightGray
@@ -58,5 +76,14 @@ extension CompanyDataInputPage: UITextFieldDelegate {
         }
         
         return true
+    }
+    
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        guard let companyName = companyNameTF.text,
+            let companyEmployees = companyEmployeesTF.text else {
+                return
+        }
+        
+        nextButton.backgroundColor = companyName.isEmpty || companyEmployees.isEmpty ? .lightGray : .lime
     }
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F15CC73A234BC8450059725E /* GenericTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15CC739234BC8450059725E /* GenericTextField.swift */; };
+		F1940B33234D2E1D008135F1 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1940B32234D2E1D008135F1 /* UIColor.swift */; };
 		F1FDFD28234BA1C3000D9584 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FDFD27234BA1C3000D9584 /* AppDelegate.swift */; };
 		F1FDFD2A234BA1C3000D9584 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FDFD29234BA1C3000D9584 /* SceneDelegate.swift */; };
 		F1FDFD2F234BA1C3000D9584 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1FDFD2D234BA1C3000D9584 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		F15CC739234BC8450059725E /* GenericTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTextField.swift; sourceTree = "<group>"; };
+		F1940B32234D2E1D008135F1 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		F1FDFD24234BA1C3000D9584 /* MarketingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarketingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1FDFD27234BA1C3000D9584 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1FDFD29234BA1C3000D9584 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				F1FDFD41234BBA37000D9584 /* UIViewControllerExt.swift */,
+				F1940B32234D2E1D008135F1 /* UIColor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1FDFD3F234BA325000D9584 /* MarketingChannel.swift in Sources */,
+				F1940B33234D2E1D008135F1 /* UIColor.swift in Sources */,
 				F1FDFD28234BA1C3000D9584 /* AppDelegate.swift in Sources */,
 				F1FDFD42234BBA37000D9584 /* UIViewControllerExt.swift in Sources */,
 				F1FDFD2A234BA1C3000D9584 /* SceneDelegate.swift in Sources */,
@@ -335,6 +339,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KVZCD8H3X4;
 				INFOPLIST_FILE = MarketingApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -353,6 +358,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KVZCD8H3X4;
 				INFOPLIST_FILE = MarketingApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

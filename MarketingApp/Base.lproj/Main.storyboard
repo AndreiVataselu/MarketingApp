@@ -136,9 +136,12 @@
                     <navigationItem key="navigationItem" id="JXd-oR-L9X"/>
                     <connections>
                         <outlet property="buttonContainer" destination="9rW-Oq-ZW8" id="eHN-B7-gRq"/>
+                        <outlet property="companyEmployeesCount" destination="9Pe-l4-YiH" id="hls-NF-ox2"/>
                         <outlet property="companyEmployeesTF" destination="m0y-II-g6R" id="qud-NJ-sx8"/>
+                        <outlet property="companyNameLabel" destination="HwB-1Z-HMu" id="5Wf-lG-M4A"/>
                         <outlet property="companyNameTF" destination="mcn-c3-XXg" id="p3Z-zA-ikQ"/>
                         <outlet property="employeesContainer" destination="VIB-bZ-pO3" id="CCi-ZE-Ggj"/>
+                        <outlet property="nextButton" destination="crc-qX-d1a" id="RGs-wq-KyG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qnu-tk-aTD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
