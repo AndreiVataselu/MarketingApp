@@ -70,8 +70,6 @@ extension GenericTextField: UITextFieldDelegate {
             return false
         }
         
-        
         return text.count < maxCharacters || string.isEmpty
-        
     }
 }
