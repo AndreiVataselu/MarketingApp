@@ -63,7 +63,7 @@ extension GenericTextField: UITextFieldDelegate {
             return false
         }
         
-        guard string.count + text.count < maxCharacters && !string.isEmpty else {
+        guard string.count + text.count <= maxCharacters else {
             let lastIndex = string.index(string.startIndex, offsetBy: maxCharacters - text.count)
             let newString = "\(text)\(string[..<lastIndex])"
             textField.text = newString
