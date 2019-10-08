@@ -23,52 +23,122 @@
             </objects>
             <point key="canvasLocation" x="-439" y="141"/>
         </scene>
-        <!--Company Name Input Page-->
+        <!--Company Data Input Page-->
         <scene sceneID="5UQ-7j-bIv">
             <objects>
-                <viewController storyboardIdentifier="CompanyNameInputPage" id="TUX-ts-FSA" customClass="CompanyNameInputPage" customModule="MarketingApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CompanyDataInputPage" id="TUX-ts-FSA" customClass="CompanyDataInputPage" customModule="MarketingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vNj-Ab-gyD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="enJ-Jj-FNs" userLabel="Company Name Container">
-                                <rect key="frame" x="0.0" y="98" width="414" height="130"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wud-OH-1Cd">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Numele firmei" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HwB-1Z-HMu">
-                                        <rect key="frame" x="25" y="25" width="364" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xD4-MV-KBv" userLabel="Company name Tf container" customClass="GenericTextField" customModule="MarketingApp" customModuleProvider="target">
-                                        <rect key="frame" x="25" y="71" width="364" height="59"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="enJ-Jj-FNs" userLabel="Company Name Container">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Numele firmei" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HwB-1Z-HMu">
+                                                <rect key="frame" x="25" y="25" width="364" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mcn-c3-XXg" customClass="GenericTextField" customModule="MarketingApp" customModuleProvider="target">
+                                                <rect key="frame" x="25" y="71" width="364" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="9aY-8t-z4p"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="HwB-1Z-HMu" firstAttribute="top" secondItem="enJ-Jj-FNs" secondAttribute="top" constant="25" id="1mF-34-qcH"/>
+                                            <constraint firstAttribute="height" constant="140" id="E64-Wd-t7g"/>
+                                            <constraint firstItem="HwB-1Z-HMu" firstAttribute="leading" secondItem="enJ-Jj-FNs" secondAttribute="leading" constant="25" id="JVK-j8-Cja"/>
+                                            <constraint firstItem="mcn-c3-XXg" firstAttribute="top" secondItem="HwB-1Z-HMu" secondAttribute="bottom" constant="10" id="Ncp-dI-dhk"/>
+                                            <constraint firstItem="mcn-c3-XXg" firstAttribute="leading" secondItem="enJ-Jj-FNs" secondAttribute="leading" constant="25" id="gzK-Eu-225"/>
+                                            <constraint firstAttribute="trailing" secondItem="HwB-1Z-HMu" secondAttribute="trailing" constant="25" id="meY-Nw-TuL"/>
+                                            <constraint firstAttribute="trailing" secondItem="mcn-c3-XXg" secondAttribute="trailing" constant="25" id="xzF-d6-Oie"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VIB-bZ-pO3" userLabel="Company Employees Count Container">
+                                        <rect key="frame" x="0.0" y="140" width="414" height="140"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Numar angajati" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Pe-l4-YiH" userLabel="Numar angajati">
+                                                <rect key="frame" x="25" y="25" width="364" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m0y-II-g6R" customClass="GenericTextField" customModule="MarketingApp" customModuleProvider="target">
+                                                <rect key="frame" x="25" y="71" width="364" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="icn-az-DLl"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="m0y-II-g6R" secondAttribute="trailing" constant="25" id="0TI-z0-RLD"/>
+                                            <constraint firstItem="9Pe-l4-YiH" firstAttribute="top" secondItem="VIB-bZ-pO3" secondAttribute="top" constant="25" id="5qX-Hy-UGd"/>
+                                            <constraint firstAttribute="height" constant="140" id="896-he-iig"/>
+                                            <constraint firstAttribute="trailing" secondItem="9Pe-l4-YiH" secondAttribute="trailing" constant="25" id="Ccn-dw-b11"/>
+                                            <constraint firstItem="9Pe-l4-YiH" firstAttribute="leading" secondItem="VIB-bZ-pO3" secondAttribute="leading" constant="25" id="NcX-cY-kAn"/>
+                                            <constraint firstItem="m0y-II-g6R" firstAttribute="top" secondItem="9Pe-l4-YiH" secondAttribute="bottom" constant="10" id="YLv-0F-8Vq"/>
+                                            <constraint firstItem="m0y-II-g6R" firstAttribute="leading" secondItem="VIB-bZ-pO3" secondAttribute="leading" constant="25" id="wTF-YK-8zt"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9rW-Oq-ZW8" userLabel="Button Container">
+                                        <rect key="frame" x="0.0" y="280" width="414" height="494"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crc-qX-d1a">
+                                                <rect key="frame" x="25" y="55" width="364" height="50"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="P9N-J7-QSE"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Mai departe"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="nextButtonPressed:" destination="TUX-ts-FSA" eventType="touchUpInside" id="Qxv-Ul-Zsa"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="crc-qX-d1a" firstAttribute="top" secondItem="9rW-Oq-ZW8" secondAttribute="top" constant="55" id="FG4-3i-G8l"/>
+                                            <constraint firstItem="crc-qX-d1a" firstAttribute="leading" secondItem="9rW-Oq-ZW8" secondAttribute="leading" constant="25" id="To3-UX-m9X"/>
+                                            <constraint firstAttribute="trailing" secondItem="crc-qX-d1a" secondAttribute="trailing" constant="25" id="aOG-70-nfI"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstItem="HwB-1Z-HMu" firstAttribute="leading" secondItem="enJ-Jj-FNs" secondAttribute="leading" constant="25" id="0hr-WG-YdS"/>
-                                    <constraint firstItem="xD4-MV-KBv" firstAttribute="top" secondItem="HwB-1Z-HMu" secondAttribute="bottom" constant="10" id="7NF-ui-RGK"/>
-                                    <constraint firstItem="HwB-1Z-HMu" firstAttribute="top" secondItem="enJ-Jj-FNs" secondAttribute="top" constant="25" id="LX7-I6-Vin"/>
-                                    <constraint firstAttribute="trailing" secondItem="HwB-1Z-HMu" secondAttribute="trailing" constant="25" id="Msc-77-yMF"/>
-                                    <constraint firstItem="xD4-MV-KBv" firstAttribute="leading" secondItem="enJ-Jj-FNs" secondAttribute="leading" constant="25" id="OWk-5t-DGT"/>
-                                    <constraint firstAttribute="trailing" secondItem="xD4-MV-KBv" secondAttribute="trailing" constant="25" id="Wj3-u4-K3e"/>
-                                    <constraint firstAttribute="height" constant="130" id="mfX-kz-MFy"/>
-                                    <constraint firstAttribute="bottom" secondItem="xD4-MV-KBv" secondAttribute="bottom" id="o3w-VL-GNJ"/>
-                                </constraints>
-                            </view>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="enJ-Jj-FNs" firstAttribute="top" secondItem="nuh-KC-a0M" secondAttribute="top" constant="10" id="Wf8-UJ-ZZV"/>
-                            <constraint firstItem="nuh-KC-a0M" firstAttribute="trailing" secondItem="enJ-Jj-FNs" secondAttribute="trailing" id="sR0-p7-ZwH"/>
-                            <constraint firstItem="enJ-Jj-FNs" firstAttribute="leading" secondItem="nuh-KC-a0M" secondAttribute="leading" id="swH-mZ-QN5"/>
+                            <constraint firstItem="wud-OH-1Cd" firstAttribute="top" secondItem="nuh-KC-a0M" secondAttribute="top" id="GWw-up-5YH"/>
+                            <constraint firstItem="nuh-KC-a0M" firstAttribute="trailing" secondItem="wud-OH-1Cd" secondAttribute="trailing" id="U7W-7q-EiW"/>
+                            <constraint firstItem="wud-OH-1Cd" firstAttribute="leading" secondItem="nuh-KC-a0M" secondAttribute="leading" id="UW2-qV-s06"/>
+                            <constraint firstItem="nuh-KC-a0M" firstAttribute="bottom" secondItem="wud-OH-1Cd" secondAttribute="bottom" id="ZVe-Oa-Wgl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nuh-KC-a0M"/>
                     </view>
                     <navigationItem key="navigationItem" id="JXd-oR-L9X"/>
                     <connections>
-                        <outlet property="companyNameTF" destination="xD4-MV-KBv" id="ibE-oG-P4j"/>
+                        <outlet property="buttonContainer" destination="9rW-Oq-ZW8" id="eHN-B7-gRq"/>
+                        <outlet property="companyEmployeesTF" destination="m0y-II-g6R" id="qud-NJ-sx8"/>
+                        <outlet property="companyNameTF" destination="mcn-c3-XXg" id="p3Z-zA-ikQ"/>
+                        <outlet property="employeesContainer" destination="VIB-bZ-pO3" id="CCi-ZE-Ggj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qnu-tk-aTD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
