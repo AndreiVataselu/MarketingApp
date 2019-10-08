@@ -18,6 +18,10 @@ class CompanyDataInputPage: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        companyEmployeesTF.keyboardType = .numberPad
+        companyNameTF.autocorrectionType = .no
+        
         companyNameTF.delegate = self
         companyEmployeesTF.delegate = self
 
@@ -26,6 +30,7 @@ class CompanyDataInputPage: UIViewController {
     @IBAction private func nextButtonPressed(_ sender: UIButton) {
         
     }
+    
 }
 
 
@@ -44,5 +49,14 @@ extension CompanyDataInputPage: UITextFieldDelegate {
         }
         
         textField.borderColor = .lightGray
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == companyNameTF {
+            companyNameTF.resignFirstResponder()
+            companyEmployeesTF.becomeFirstResponder()
+        }
+        
+        return true
     }
 }
