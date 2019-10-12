@@ -16,6 +16,8 @@ enum CompanySize: String {
 }
 
 class SessionManager {
+    static let shared = SessionManager()
+    
     private(set) var companySize: CompanySize = .none
     
     var name: String = ""
@@ -33,9 +35,6 @@ class SessionManager {
         }
     }
     var indicators: [Indicator] = []
-    
-    static let shared = SessionManager()
-    
     private init() {
         
     }

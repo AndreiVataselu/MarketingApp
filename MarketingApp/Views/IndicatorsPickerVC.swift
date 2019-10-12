@@ -18,6 +18,9 @@ class IndicatorsPickerVC: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        nextButton.layer.cornerRadius = 25
+        nextButton.backgroundColor = .lime
+        tableView.tableHeaderView = getHeaderView()
         presenter = IndicatorsPickerPresenter()
     }
     
@@ -26,6 +29,24 @@ class IndicatorsPickerVC: UIViewController {
             return
         }
         cell.selectedCell()
+    }
+    
+    private func getHeaderView() -> UIView {
+        let frame = CGRect(x: 0, y: 0, width: tableView.frame.width, height: 100)
+        let view = UIView(frame: frame)
+        
+        let label = UILabel(frame: view.bounds)
+        label.text = "Alege criteriile pentru campania ta de marketing"
+        label.font = .systemFont(ofSize: 30, weight: .thin)
+        label.numberOfLines = 0
+        
+        view.addSubview(label)
+        
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 25).isActive = true
+        label.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -25).isActive = true
+        
+        return view
     }
 }
 
@@ -50,23 +71,5 @@ extension IndicatorsPickerVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         performCellSelection(indexPath: indexPath)
         presenter?.indicatorDeselected(index: indexPath.row)
-    }
-    
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let view = UIView()
-        let label = UILabel(frame: view.bounds)
-        view.addSubview(label)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15).isActive = true
-        label.trailingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15).isActive = true
-        label.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 15).isActive = true
-        label.text = "Alege criteriile pentru campania ta de marketing"
-        label.font = .systemFont(ofSize: 30, weight: .thin)
-        label.textColor = .black
-        return view
-    }
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 75
     }
 }

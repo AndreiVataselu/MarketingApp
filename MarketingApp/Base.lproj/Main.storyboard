@@ -156,14 +156,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alege criteriile pentru campania ta de marketing" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLk-CY-v3s">
-                                <rect key="frame" x="25" y="114" width="364" height="72"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oa4-eJ-uV0">
-                                <rect key="frame" x="0.0" y="211" width="414" height="651"/>
+                                <rect key="frame" x="0.0" y="69" width="414" height="793"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ChooseIndicatorTVC" id="IVP-YZ-8AD" customClass="ChooseIndicatorTVC" customModule="MarketingApp" customModuleProvider="target">
@@ -187,27 +181,39 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="separatorInset" minX="35" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
                                             <outlet property="indicatorNameLabel" destination="SCS-q5-E1t" id="w5K-2S-vPH"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OR9-GE-8F3">
+                                <rect key="frame" x="339" y="787" width="50" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="DvX-mk-EDR"/>
+                                    <constraint firstAttribute="width" secondItem="OR9-GE-8F3" secondAttribute="height" multiplier="1:1" id="Ffm-GA-a8u"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <state key="normal" title="&gt;">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="tLk-CY-v3s" firstAttribute="top" secondItem="bqi-6k-4Rk" secondAttribute="top" constant="70" id="5jd-fX-wcD"/>
+                            <constraint firstItem="bqi-6k-4Rk" firstAttribute="bottom" secondItem="OR9-GE-8F3" secondAttribute="bottom" constant="25" id="8Rm-cN-0lv"/>
                             <constraint firstItem="oa4-eJ-uV0" firstAttribute="leading" secondItem="bqi-6k-4Rk" secondAttribute="leading" id="JmS-Lj-QKW"/>
                             <constraint firstItem="bqi-6k-4Rk" firstAttribute="bottom" secondItem="oa4-eJ-uV0" secondAttribute="bottom" id="KXb-S9-qaN"/>
-                            <constraint firstItem="oa4-eJ-uV0" firstAttribute="top" secondItem="tLk-CY-v3s" secondAttribute="bottom" constant="25" id="SX6-Ef-aLF"/>
-                            <constraint firstItem="tLk-CY-v3s" firstAttribute="leading" secondItem="bqi-6k-4Rk" secondAttribute="leading" constant="25" id="h1a-6v-hnA"/>
-                            <constraint firstAttribute="trailing" secondItem="tLk-CY-v3s" secondAttribute="trailing" constant="25" id="wuD-e3-qSE"/>
+                            <constraint firstItem="oa4-eJ-uV0" firstAttribute="top" secondItem="bqi-6k-4Rk" secondAttribute="top" constant="25" id="QxM-xk-qx5"/>
+                            <constraint firstItem="bqi-6k-4Rk" firstAttribute="trailing" secondItem="OR9-GE-8F3" secondAttribute="trailing" constant="25" id="UA1-QE-Sd9"/>
                             <constraint firstItem="bqi-6k-4Rk" firstAttribute="trailing" secondItem="oa4-eJ-uV0" secondAttribute="trailing" id="ziv-FE-BCF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bqi-6k-4Rk"/>
                     </view>
                     <connections>
+                        <outlet property="nextButton" destination="OR9-GE-8F3" id="5Cd-Bm-GIc"/>
                         <outlet property="tableView" destination="oa4-eJ-uV0" id="s5c-A0-Ck2"/>
                     </connections>
                 </viewController>

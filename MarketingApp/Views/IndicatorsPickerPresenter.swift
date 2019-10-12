@@ -12,6 +12,7 @@ protocol IndicatorsPickerPresenterProtocol: class {
     var indicators: [Indicator] { get }
     func indicatorSelected(index: Int)
     func indicatorDeselected(index: Int)
+    func sendSelectors()
 }
 
 class IndicatorsPickerPresenter: IndicatorsPickerPresenterProtocol {    
@@ -30,6 +31,10 @@ class IndicatorsPickerPresenter: IndicatorsPickerPresenterProtocol {
     
     func indicatorDeselected(index: Int) {
         chosenIndicators = chosenIndicators.filter { $0 != indicators[index] }
+    }
+    
+    func sendSelectors() {
+        SessionManager.shared.indicators = chosenIndicators
     }
     
 }
