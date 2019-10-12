@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CompanyDataInputPage: UIViewController {
+class CompanyDataInputVC: UIViewController {
     
     @IBOutlet private weak var employeesContainer: UIView!
     @IBOutlet private weak var buttonContainer: UIView!
@@ -39,11 +39,20 @@ class CompanyDataInputPage: UIViewController {
             return
         }
         
+        SessionManager.shared.name = companyName
+        SessionManager.shared.employees = Int(employeesCount) ?? 0
+        
+        guard SessionManager.shared.companySize != .none else {
+            alert(title: "Numar invalid", message: "Numarul angajatilor este invalid.")
+            return
+        }
+        let indicatorsPickerVC = IndicatorsPickerVC.fromStoryboard()
+        navigationController?.pushViewController(indicatorsPickerVC, animated: true)
     }
 }
 
 
-extension CompanyDataInputPage: UITextFieldDelegate {
+extension CompanyDataInputVC: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         guard let textField = textField as? GenericTextField else {
             return

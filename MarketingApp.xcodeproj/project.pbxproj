@@ -8,7 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		F15CC73A234BC8450059725E /* GenericTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15CC739234BC8450059725E /* GenericTextField.swift */; };
+		F17520D62351BE1F00E92EC2 /* ChooseIndicatorTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17520D52351BE1F00E92EC2 /* ChooseIndicatorTVC.swift */; };
 		F1940B33234D2E1D008135F1 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1940B32234D2E1D008135F1 /* UIColor.swift */; };
+		F1F00D9F2351329C00839D1F /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F00D9E2351329C00839D1F /* SessionManager.swift */; };
+		F1F00DA1235197F500839D1F /* IndicatorsPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F00DA0235197F500839D1F /* IndicatorsPickerVC.swift */; };
+		F1F00DA3235198BF00839D1F /* IndicatorsPickerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F00DA2235198BF00839D1F /* IndicatorsPickerPresenter.swift */; };
 		F1FDFD28234BA1C3000D9584 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FDFD27234BA1C3000D9584 /* AppDelegate.swift */; };
 		F1FDFD2A234BA1C3000D9584 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FDFD29234BA1C3000D9584 /* SceneDelegate.swift */; };
 		F1FDFD2F234BA1C3000D9584 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1FDFD2D234BA1C3000D9584 /* Main.storyboard */; };
@@ -17,12 +21,16 @@
 		F1FDFD3D234BA1F6000D9584 /* Offers.json in Resources */ = {isa = PBXBuildFile; fileRef = F1FDFD3C234BA1F6000D9584 /* Offers.json */; };
 		F1FDFD3F234BA325000D9584 /* MarketingChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FDFD3E234BA325000D9584 /* MarketingChannel.swift */; };
 		F1FDFD42234BBA37000D9584 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FDFD41234BBA37000D9584 /* UIViewControllerExt.swift */; };
-		F1FDFD46234BBC31000D9584 /* CompanyDataInputPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FDFD45234BBC31000D9584 /* CompanyDataInputPage.swift */; };
+		F1FDFD46234BBC31000D9584 /* CompanyDataInputVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FDFD45234BBC31000D9584 /* CompanyDataInputVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F15CC739234BC8450059725E /* GenericTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTextField.swift; sourceTree = "<group>"; };
+		F17520D52351BE1F00E92EC2 /* ChooseIndicatorTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseIndicatorTVC.swift; sourceTree = "<group>"; };
 		F1940B32234D2E1D008135F1 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		F1F00D9E2351329C00839D1F /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		F1F00DA0235197F500839D1F /* IndicatorsPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorsPickerVC.swift; sourceTree = "<group>"; };
+		F1F00DA2235198BF00839D1F /* IndicatorsPickerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorsPickerPresenter.swift; sourceTree = "<group>"; };
 		F1FDFD24234BA1C3000D9584 /* MarketingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarketingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1FDFD27234BA1C3000D9584 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1FDFD29234BA1C3000D9584 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,7 +41,7 @@
 		F1FDFD3C234BA1F6000D9584 /* Offers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Offers.json; sourceTree = "<group>"; };
 		F1FDFD3E234BA325000D9584 /* MarketingChannel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketingChannel.swift; sourceTree = "<group>"; };
 		F1FDFD41234BBA37000D9584 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
-		F1FDFD45234BBC31000D9584 /* CompanyDataInputPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDataInputPage.swift; sourceTree = "<group>"; };
+		F1FDFD45234BBC31000D9584 /* CompanyDataInputVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDataInputVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +63,22 @@
 			path = "Generic Components";
 			sourceTree = "<group>";
 		};
+		F17520D42351BE0700E92EC2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F17520D52351BE1F00E92EC2 /* ChooseIndicatorTVC.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		F1F00D9D2351327A00839D1F /* Session Manager */ = {
+			isa = PBXGroup;
+			children = (
+				F1F00D9E2351329C00839D1F /* SessionManager.swift */,
+			);
+			path = "Session Manager";
+			sourceTree = "<group>";
+		};
 		F1FDFD1B234BA1C3000D9584 = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +98,7 @@
 		F1FDFD26234BA1C3000D9584 /* MarketingApp */ = {
 			isa = PBXGroup;
 			children = (
+				F1F00D9D2351327A00839D1F /* Session Manager */,
 				F15CC738234BC7F50059725E /* Generic Components */,
 				F1FDFD44234BBBB9000D9584 /* Views */,
 				F1FDFD40234BBA1A000D9584 /* Extensions */,
@@ -109,7 +134,10 @@
 		F1FDFD44234BBBB9000D9584 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F1FDFD45234BBC31000D9584 /* CompanyDataInputPage.swift */,
+				F17520D42351BE0700E92EC2 /* Cells */,
+				F1FDFD45234BBC31000D9584 /* CompanyDataInputVC.swift */,
+				F1F00DA0235197F500839D1F /* IndicatorsPickerVC.swift */,
+				F1F00DA2235198BF00839D1F /* IndicatorsPickerPresenter.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -187,11 +215,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1FDFD3F234BA325000D9584 /* MarketingChannel.swift in Sources */,
+				F1F00DA1235197F500839D1F /* IndicatorsPickerVC.swift in Sources */,
 				F1940B33234D2E1D008135F1 /* UIColor.swift in Sources */,
+				F17520D62351BE1F00E92EC2 /* ChooseIndicatorTVC.swift in Sources */,
 				F1FDFD28234BA1C3000D9584 /* AppDelegate.swift in Sources */,
 				F1FDFD42234BBA37000D9584 /* UIViewControllerExt.swift in Sources */,
 				F1FDFD2A234BA1C3000D9584 /* SceneDelegate.swift in Sources */,
-				F1FDFD46234BBC31000D9584 /* CompanyDataInputPage.swift in Sources */,
+				F1FDFD46234BBC31000D9584 /* CompanyDataInputVC.swift in Sources */,
+				F1F00D9F2351329C00839D1F /* SessionManager.swift in Sources */,
+				F1F00DA3235198BF00839D1F /* IndicatorsPickerPresenter.swift in Sources */,
 				F15CC73A234BC8450059725E /* GenericTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
