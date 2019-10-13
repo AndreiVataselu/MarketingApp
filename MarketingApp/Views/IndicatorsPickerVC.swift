@@ -9,6 +9,10 @@
 import Foundation
 import UIKit
 
+protocol IndicatorsPickerViewProtocol: class {
+    func changeButtonState(hidden: Bool)
+}
+
 class IndicatorsPickerVC: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var nextButton: UIButton!
@@ -21,7 +25,11 @@ class IndicatorsPickerVC: UIViewController {
         nextButton.layer.cornerRadius = 25
         nextButton.backgroundColor = .lime
         tableView.tableHeaderView = getHeaderView()
-        presenter = IndicatorsPickerPresenter()
+        presenter = IndicatorsPickerPresenter(view: self)
+    }
+    
+    @IBAction private func nextButtonPressed() {
+        presenter?.sendIndicators()
     }
     
     private func performCellSelection(indexPath: IndexPath) {
@@ -47,6 +55,12 @@ class IndicatorsPickerVC: UIViewController {
         label.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -25).isActive = true
         
         return view
+    }
+}
+
+extension IndicatorsPickerVC: IndicatorsPickerViewProtocol {
+    func changeButtonState(hidden: Bool) {
+        nextButton.isHidden = hidden
     }
 }
 

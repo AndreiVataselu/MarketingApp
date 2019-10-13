@@ -12,15 +12,23 @@ protocol IndicatorsPickerPresenterProtocol: class {
     var indicators: [Indicator] { get }
     func indicatorSelected(index: Int)
     func indicatorDeselected(index: Int)
-    func sendSelectors()
+    func sendIndicators()
 }
 
-class IndicatorsPickerPresenter: IndicatorsPickerPresenterProtocol {    
+class IndicatorsPickerPresenter: IndicatorsPickerPresenterProtocol {   private weak var view: IndicatorsPickerViewProtocol?
     var indicators: [Indicator] {
         return [.locations, .age, .sex, .languages, .events, .company, .industry, .experience, .education, .technology, .interests, .deviceType, .keywords, .similarProducts, .links]
     }
     
-    var chosenIndicators: [Indicator] = []
+    var chosenIndicators: [Indicator] = [] {
+        didSet {
+            view?.changeButtonState(hidden: chosenIndicators.isEmpty)
+        }
+    }
+    
+    init(view: IndicatorsPickerViewProtocol) {
+        self.view = view
+    }
     
     func indicatorSelected(index: Int) {
         guard index < indicators.count else {
@@ -33,7 +41,7 @@ class IndicatorsPickerPresenter: IndicatorsPickerPresenterProtocol {
         chosenIndicators = chosenIndicators.filter { $0 != indicators[index] }
     }
     
-    func sendSelectors() {
+    func sendIndicators() {
         SessionManager.shared.indicators = chosenIndicators
     }
     
