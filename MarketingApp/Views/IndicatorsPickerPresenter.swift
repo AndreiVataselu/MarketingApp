@@ -15,7 +15,8 @@ protocol IndicatorsPickerPresenterProtocol: class {
     func sendIndicators()
 }
 
-class IndicatorsPickerPresenter: IndicatorsPickerPresenterProtocol {   private weak var view: IndicatorsPickerViewProtocol?
+class IndicatorsPickerPresenter: IndicatorsPickerPresenterProtocol {
+    private weak var view: IndicatorsPickerViewProtocol?
     var indicators: [Indicator] {
         return [.locations, .age, .sex, .languages, .events, .company, .industry, .experience, .education, .technology, .interests, .deviceType, .keywords, .similarProducts, .links]
     }

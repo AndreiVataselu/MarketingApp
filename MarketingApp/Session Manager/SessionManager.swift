@@ -19,8 +19,9 @@ class SessionManager {
     static let shared = SessionManager()
     
     private(set) var companySize: CompanySize = .none
-    
+    var indicators: [Indicator] = []
     var name: String = ""
+    var channels: [MarketingChannel] = []
     var employees: Int = 0 {
         didSet {
             if employees <= 0 {
@@ -34,9 +35,19 @@ class SessionManager {
             }
         }
     }
-    var indicators: [Indicator] = []
+    
     private init() {
-        
+        if let path = Bundle.main.path(forResource: "Offers", ofType: "json"),
+            case let url = URL(fileURLWithPath: path),
+            let json = try? Data(contentsOf: url) {
+            
+            do {
+                channels = try JSONDecoder().decode([MarketingChannel].self, from: json)
+            } catch {
+                print("For some reason I couldn't decode the channels 🤷🏻‍♂️")
+            }
+            
+        }
     }
     
 }
