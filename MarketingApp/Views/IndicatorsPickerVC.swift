@@ -30,6 +30,7 @@ class IndicatorsPickerVC: UIViewController {
     
     @IBAction private func nextButtonPressed() {
         presenter?.sendIndicators()
+        SessionManager.shared.generateOffers().forEach { print($0.name) }
     }
     
     private func performCellSelection(indexPath: IndexPath) {

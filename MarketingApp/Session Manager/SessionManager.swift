@@ -18,6 +18,7 @@ enum CompanySize: String {
 class SessionManager {
     static let shared = SessionManager()
     
+    // User's company information
     private(set) var companySize: CompanySize = .none
     var indicators: [Indicator] = []
     var name: String = ""
@@ -33,6 +34,14 @@ class SessionManager {
             } else {
                 companySize = .large
             }
+        }
+    }
+    
+    func generateOffers() -> [MarketingChannel] {
+        return channels.filter { marketingChannel in
+            let channelIndicatorsSet = Set(marketingChannel.indicators)
+            let chosenIndicatorsSet = Set(indicators)
+            return !channelIndicatorsSet.intersection(chosenIndicatorsSet).isEmpty
         }
     }
     
