@@ -30,7 +30,8 @@ class IndicatorsPickerVC: UIViewController {
     
     @IBAction private func nextButtonPressed() {
         presenter?.sendIndicators()
-        SessionManager.shared.generateOffers().forEach { print($0.name) }
+        let nextVC = MarketingChannelPickerVC.fromStoryboard()
+        navigationController?.pushViewController(nextVC, animated: true)
     }
     
     private func performCellSelection(indexPath: IndexPath) {

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F15BF5442354791800B664CE /* MarketingChannelPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15BF5432354791800B664CE /* MarketingChannelPickerVC.swift */; };
+		F15BF54623547AE100B664CE /* MarketingChannelPickerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15BF54523547AE100B664CE /* MarketingChannelPickerPresenter.swift */; };
+		F15BF54823547BA100B664CE /* ChooseMarketingChannelTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15BF54723547BA100B664CE /* ChooseMarketingChannelTVC.swift */; };
+		F15BF550235483CC00B664CE /* SelectOfferVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15BF54F235483CC00B664CE /* SelectOfferVC.swift */; };
 		F15CC73A234BC8450059725E /* GenericTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15CC739234BC8450059725E /* GenericTextField.swift */; };
 		F17520D62351BE1F00E92EC2 /* ChooseIndicatorTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17520D52351BE1F00E92EC2 /* ChooseIndicatorTVC.swift */; };
 		F1940B33234D2E1D008135F1 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1940B32234D2E1D008135F1 /* UIColor.swift */; };
@@ -25,6 +29,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F15BF5432354791800B664CE /* MarketingChannelPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketingChannelPickerVC.swift; sourceTree = "<group>"; };
+		F15BF54523547AE100B664CE /* MarketingChannelPickerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketingChannelPickerPresenter.swift; sourceTree = "<group>"; };
+		F15BF54723547BA100B664CE /* ChooseMarketingChannelTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseMarketingChannelTVC.swift; sourceTree = "<group>"; };
+		F15BF54F235483CC00B664CE /* SelectOfferVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectOfferVC.swift; sourceTree = "<group>"; };
 		F15CC739234BC8450059725E /* GenericTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTextField.swift; sourceTree = "<group>"; };
 		F17520D52351BE1F00E92EC2 /* ChooseIndicatorTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseIndicatorTVC.swift; sourceTree = "<group>"; };
 		F1940B32234D2E1D008135F1 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
@@ -67,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				F17520D52351BE1F00E92EC2 /* ChooseIndicatorTVC.swift */,
+				F15BF54723547BA100B664CE /* ChooseMarketingChannelTVC.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -136,8 +145,11 @@
 			children = (
 				F17520D42351BE0700E92EC2 /* Cells */,
 				F1FDFD45234BBC31000D9584 /* CompanyDataInputVC.swift */,
+				F15BF54F235483CC00B664CE /* SelectOfferVC.swift */,
 				F1F00DA0235197F500839D1F /* IndicatorsPickerVC.swift */,
 				F1F00DA2235198BF00839D1F /* IndicatorsPickerPresenter.swift */,
+				F15BF5432354791800B664CE /* MarketingChannelPickerVC.swift */,
+				F15BF54523547AE100B664CE /* MarketingChannelPickerPresenter.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -217,12 +229,16 @@
 				F1FDFD3F234BA325000D9584 /* MarketingChannel.swift in Sources */,
 				F1F00DA1235197F500839D1F /* IndicatorsPickerVC.swift in Sources */,
 				F1940B33234D2E1D008135F1 /* UIColor.swift in Sources */,
+				F15BF550235483CC00B664CE /* SelectOfferVC.swift in Sources */,
 				F17520D62351BE1F00E92EC2 /* ChooseIndicatorTVC.swift in Sources */,
 				F1FDFD28234BA1C3000D9584 /* AppDelegate.swift in Sources */,
 				F1FDFD42234BBA37000D9584 /* UIViewControllerExt.swift in Sources */,
+				F15BF54623547AE100B664CE /* MarketingChannelPickerPresenter.swift in Sources */,
 				F1FDFD2A234BA1C3000D9584 /* SceneDelegate.swift in Sources */,
+				F15BF5442354791800B664CE /* MarketingChannelPickerVC.swift in Sources */,
 				F1FDFD46234BBC31000D9584 /* CompanyDataInputVC.swift in Sources */,
 				F1F00D9F2351329C00839D1F /* SessionManager.swift in Sources */,
+				F15BF54823547BA100B664CE /* ChooseMarketingChannelTVC.swift in Sources */,
 				F1F00DA3235198BF00839D1F /* IndicatorsPickerPresenter.swift in Sources */,
 				F15CC73A234BC8450059725E /* GenericTextField.swift in Sources */,
 			);
