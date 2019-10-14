@@ -27,6 +27,7 @@ class SelectOfferVC: UIViewController {
     private func configureLayout() {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: collectionView.frame.width, height: 500)
+        layout.scrollDirection = .horizontal
         collectionView.collectionViewLayout = layout
     }
 }
