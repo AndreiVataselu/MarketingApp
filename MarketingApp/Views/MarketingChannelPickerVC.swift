@@ -38,7 +38,10 @@ extension MarketingChannelPickerVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = SelectOfferVC.fromStoryboard()
+        vc.marketingChannel = presenter?.channels[indexPath.row]
         present(vc, animated: true)
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
         
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

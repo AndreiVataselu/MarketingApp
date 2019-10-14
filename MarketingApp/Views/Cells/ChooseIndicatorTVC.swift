@@ -21,7 +21,7 @@ class ChooseIndicatorTVC: UITableViewCell {
     func configureCell(indicatorName: String) {
         accessoryType = isCellSelected ? .checkmark : .none
         indicatorNameLabel?.font = isCellSelected ? .systemFont(ofSize: 17, weight: .regular) : .systemFont(ofSize: 17, weight: .thin)
-        indicatorNameLabel.text = indicatorName
+        indicatorNameLabel?.text = indicatorName
     }
 
     func selectedCell() {
