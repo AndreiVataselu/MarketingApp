@@ -12,23 +12,30 @@ import UIKit
 class SelectOfferVC: UIViewController {
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var priceLabel: UILabel!
+    
+    private var currentIndex: Int = -1
     var marketingChannel: MarketingChannel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updatePrice(for: 0)
         configureLayout()
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.bounces = true
         collectionView.alwaysBounceHorizontal = true
+        collectionView.isPagingEnabled = true
         nameLabel.text = marketingChannel?.name ?? ""
     }
     
     private func configureLayout() {
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: collectionView.frame.width, height: 500)
+        layout.itemSize = CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
         layout.scrollDirection = .horizontal
+        layout.minimumLineSpacing = 0
         collectionView.collectionViewLayout = layout
+        collectionView.decelerationRate = .fast
     }
 }
 
@@ -48,5 +55,35 @@ extension SelectOfferVC: UICollectionViewDelegate, UICollectionViewDataSource {
         return cell
     }
     
+    private func updatePrice(for index: Int) {
+        guard index != currentIndex else {
+            return
+        }
+        
+        currentIndex = index
+        
+        priceLabel.text = "\(marketingChannel?.packages[currentIndex].price ?? 0)"
+    }
+}
+
+extension SelectOfferVC: UIScrollViewDelegate {
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        guard let index = collectionView.indexPathsForVisibleItems.first else {
+            return
+        }
+        
+        updatePrice(for: index.row)
+    }
     
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        guard !decelerate else {
+            return
+        }
+        
+        guard let index = collectionView.indexPathsForVisibleItems.first else {
+            return
+        }
+        
+        updatePrice(for: index.row)
+    }
 }

@@ -9,13 +9,13 @@
 import UIKit
 
 class ChannelOffersCVC: UICollectionViewCell {
-    @IBOutlet private weak var priceLabel: UILabel!
+//    @IBOutlet private weak var priceLabel: UILabel!
     @IBOutlet private weak var tableView: UITableView!
     private var offer: Offer?
     
     func configure(offer: Offer) {
         self.offer = offer
-        priceLabel.text = "\(offer.price) €"
+//        priceLabel.text = "\(offer.price) €"
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tableFooterView = UIView(frame: .zero)
