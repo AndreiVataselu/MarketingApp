@@ -9,6 +9,10 @@
 import Foundation
 import UIKit
 
+protocol CartDelegate: class {
+    func addToCart(offer: Offer)
+}
+
 class SelectOfferVC: UIViewController {
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var collectionView: UICollectionView!
@@ -16,6 +20,7 @@ class SelectOfferVC: UIViewController {
     
     private var currentIndex: Int = -1
     var marketingChannel: MarketingChannel?
+    weak var cartDelegate: CartDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +41,14 @@ class SelectOfferVC: UIViewController {
         layout.minimumLineSpacing = 0
         collectionView.collectionViewLayout = layout
         collectionView.decelerationRate = .fast
+    }
+    
+    @IBAction private func addToCartButtonPressed(_ sender: UIButton) {
+        guard let selectedOffer = marketingChannel?.packages[currentIndex] else {
+            return
+        }
+        cartDelegate?.addToCart(offer: selectedOffer)
+        dismiss(animated: true, completion: nil)
     }
 }
 
@@ -68,22 +81,9 @@ extension SelectOfferVC: UICollectionViewDelegate, UICollectionViewDataSource {
 
 extension SelectOfferVC: UIScrollViewDelegate {
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        guard let index = collectionView.indexPathsForVisibleItems.first else {
-            return
-        }
-        
-        updatePrice(for: index.row)
-    }
-    
-    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        guard !decelerate else {
-            return
-        }
-        
-        guard let index = collectionView.indexPathsForVisibleItems.first else {
-            return
-        }
-        
-        updatePrice(for: index.row)
+        // Width of a collection view cell is the same as the collection view's width
+        // quick maths
+        let currentIndex = Int(scrollView.contentOffset.x / scrollView.frame.size.width)
+        updatePrice(for: currentIndex)
     }
 }
