@@ -13,6 +13,8 @@
 		F15BF550235483CC00B664CE /* SelectOfferVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15BF54F235483CC00B664CE /* SelectOfferVC.swift */; };
 		F15CC73A234BC8450059725E /* GenericTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15CC739234BC8450059725E /* GenericTextField.swift */; };
 		F17520D62351BE1F00E92EC2 /* ChooseIndicatorTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17520D52351BE1F00E92EC2 /* ChooseIndicatorTVC.swift */; };
+		F17762CB2357496300CBE07F /* CartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17762CA2357496300CBE07F /* CartItem.swift */; };
+		F17762CD2357497B00CBE07F /* CartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17762CC2357497B00CBE07F /* CartVC.swift */; };
 		F1940B33234D2E1D008135F1 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1940B32234D2E1D008135F1 /* UIColor.swift */; };
 		F1D09889235492E100598119 /* ChannelOffersCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D09888235492E100598119 /* ChannelOffersCVC.swift */; };
 		F1F00D9F2351329C00839D1F /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F00D9E2351329C00839D1F /* SessionManager.swift */; };
@@ -36,6 +38,8 @@
 		F15BF54F235483CC00B664CE /* SelectOfferVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectOfferVC.swift; sourceTree = "<group>"; };
 		F15CC739234BC8450059725E /* GenericTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTextField.swift; sourceTree = "<group>"; };
 		F17520D52351BE1F00E92EC2 /* ChooseIndicatorTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseIndicatorTVC.swift; sourceTree = "<group>"; };
+		F17762CA2357496300CBE07F /* CartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItem.swift; sourceTree = "<group>"; };
+		F17762CC2357497B00CBE07F /* CartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartVC.swift; sourceTree = "<group>"; };
 		F1940B32234D2E1D008135F1 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		F1D09888235492E100598119 /* ChannelOffersCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelOffersCVC.swift; sourceTree = "<group>"; };
 		F1F00D9E2351329C00839D1F /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
@@ -139,6 +143,7 @@
 			children = (
 				F1FDFD3C234BA1F6000D9584 /* Offers.json */,
 				F1FDFD3E234BA325000D9584 /* MarketingChannel.swift */,
+				F17762CA2357496300CBE07F /* CartItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -161,6 +166,7 @@
 				F15BF54F235483CC00B664CE /* SelectOfferVC.swift */,
 				F1F00DA0235197F500839D1F /* IndicatorsPickerVC.swift */,
 				F15BF5432354791800B664CE /* MarketingChannelPickerVC.swift */,
+				F17762CC2357497B00CBE07F /* CartVC.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -249,7 +255,9 @@
 				F15BF5442354791800B664CE /* MarketingChannelPickerVC.swift in Sources */,
 				F1FDFD46234BBC31000D9584 /* CompanyDataInputVC.swift in Sources */,
 				F1D09889235492E100598119 /* ChannelOffersCVC.swift in Sources */,
+				F17762CB2357496300CBE07F /* CartItem.swift in Sources */,
 				F1F00D9F2351329C00839D1F /* SessionManager.swift in Sources */,
+				F17762CD2357497B00CBE07F /* CartVC.swift in Sources */,
 				F15BF54823547BA100B664CE /* ChooseMarketingChannelTVC.swift in Sources */,
 				F1F00DA3235198BF00839D1F /* IndicatorsPickerPresenter.swift in Sources */,
 				F15CC73A234BC8450059725E /* GenericTextField.swift in Sources */,
