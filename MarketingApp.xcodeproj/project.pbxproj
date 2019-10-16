@@ -83,6 +83,15 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		F1BCD16523572B1C0018C11F /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				F1F00DA2235198BF00839D1F /* IndicatorsPickerPresenter.swift */,
+				F15BF54523547AE100B664CE /* MarketingChannelPickerPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
 		F1F00D9D2351327A00839D1F /* Session Manager */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,13 +155,12 @@
 		F1FDFD44234BBBB9000D9584 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F1BCD16523572B1C0018C11F /* Presenters */,
 				F17520D42351BE0700E92EC2 /* Cells */,
 				F1FDFD45234BBC31000D9584 /* CompanyDataInputVC.swift */,
 				F15BF54F235483CC00B664CE /* SelectOfferVC.swift */,
 				F1F00DA0235197F500839D1F /* IndicatorsPickerVC.swift */,
-				F1F00DA2235198BF00839D1F /* IndicatorsPickerPresenter.swift */,
 				F15BF5432354791800B664CE /* MarketingChannelPickerVC.swift */,
-				F15BF54523547AE100B664CE /* MarketingChannelPickerPresenter.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
