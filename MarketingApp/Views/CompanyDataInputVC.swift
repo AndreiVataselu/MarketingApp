@@ -25,7 +25,7 @@ class CompanyDataInputVC: UIViewController {
         
         companyEmployeesTF.keyboardType = .numberPad
         companyNameTF.autocorrectionType = .no
-        
+        nextButton.backgroundColor = .lightGray
         companyNameTF.delegate = self
         companyEmployeesTF.delegate = self
 
@@ -39,7 +39,7 @@ class CompanyDataInputVC: UIViewController {
             return
         }
         
-        SessionManager.shared.name = companyName
+        SessionManager.shared.companyName = companyName
         SessionManager.shared.employees = Int(employeesCount) ?? 0
         
         guard SessionManager.shared.companySize != .none else {
@@ -58,10 +58,10 @@ extension CompanyDataInputVC: UITextFieldDelegate {
             return
         }
         
-        companyNameLabel.textColor = textField == companyNameTF ? .lime : .black
-        companyEmployeesCount.textColor = textField == companyEmployeesTF ? .lime : .black
+        companyNameLabel.textColor = textField == companyNameTF ? .lightGray : .black
+        companyEmployeesCount.textColor = textField == companyEmployeesTF ? .lightGray : .black
         
-        textField.borderColor = UIColor.lime
+        textField.borderColor = .lightGray
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
@@ -93,6 +93,6 @@ extension CompanyDataInputVC: UITextFieldDelegate {
                 return
         }
         
-        nextButton.backgroundColor = companyName.isEmpty || companyEmployees.isEmpty ? .lightGray : .lime
+        nextButton.backgroundColor = companyName.isEmpty || companyEmployees.isEmpty ? .lightGray : .black
     }
 }

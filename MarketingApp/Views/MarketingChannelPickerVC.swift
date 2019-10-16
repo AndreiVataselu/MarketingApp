@@ -27,18 +27,29 @@ class MarketingChannelPickerVC: UIViewController {
     }
     
     private func addCartButton() {
-        let cartButton = UIBarButtonItem(title: "Cos (\(presenter?.cart.count ?? 0))", style: .plain, target: self, action: nil)
+        let cartButton = UIBarButtonItem(title: "🛒 (\(presenter?.cart.items.count ?? 0))",
+            style: .plain,
+            target: self,
+            action: #selector(MarketingChannelPickerVC.goToCart))
+        
         navigationItem.rightBarButtonItem = cartButton
     }
     
     private func refreshCartButton() {
-        navigationItem.rightBarButtonItem?.title = "Cos (\(presenter?.cart.count ?? 0))"
+        navigationItem.rightBarButtonItem?.title = "🛒 (\(presenter?.cart.items.count ?? 0))"
+    }
+    
+    @objc
+    private func goToCart() {
+        let cartVC = CartVC.fromStoryboard()
+        cartVC.cart = presenter?.cart
+        navigationController?.pushViewController(cartVC, animated: true)
     }
 }
 
 extension MarketingChannelPickerVC: CartDelegate {
     func addToCart(item: CartItem) {
-        presenter?.cart.append(item)
+        presenter?.addToCart(cartItem: item)
         refreshCartButton()
     }
 }
@@ -58,7 +69,7 @@ extension MarketingChannelPickerVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard presenter?.cart.filter({ $0.channelName == presenter?.channels[indexPath.row].name  }).isEmpty ?? false else {
+        guard presenter?.cart.items.filter({ $0.channelName == presenter?.channels[indexPath.row].name  }).isEmpty ?? false else {
             alert(title: "Eroare", message: "Poti alege doar un pachet pe fiecare canal!")
             tableView.deselectRow(at: indexPath, animated: true)
             return

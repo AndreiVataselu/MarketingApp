@@ -22,8 +22,6 @@ class IndicatorsPickerVC: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        nextButton.layer.cornerRadius = 25
-        nextButton.backgroundColor = .lime
         tableView.tableHeaderView = getHeaderView()
         presenter = IndicatorsPickerPresenter(view: self)
     }

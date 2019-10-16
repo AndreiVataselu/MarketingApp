@@ -10,9 +10,9 @@ import Foundation
 
 enum CompanySize: String {
     case none
-    case small = "Mica"
-    case medium = "Medie"
-    case large = "Mare"
+    case small = "mica"
+    case medium = "medie"
+    case large = "mare"
 }
 
 class SessionManager {
@@ -21,7 +21,7 @@ class SessionManager {
     // User's company information
     private(set) var companySize: CompanySize = .none
     var indicators: [Indicator] = []
-    var name: String = ""
+    var companyName: String = ""
     var channels: [MarketingChannel] = []
     var employees: Int = 0 {
         didSet {

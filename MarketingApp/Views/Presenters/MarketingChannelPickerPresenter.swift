@@ -10,7 +10,8 @@ import Foundation
 
 protocol MarketingChannelPresenterProtocol: class {
     var channels: [MarketingChannel] { get }
-    var cart: [CartItem]  { get set }
+    var cart: CartProtocol { get }
+    func addToCart(cartItem: CartItem)
 }
 
 class MarketingChannelPresenter: MarketingChannelPresenterProtocol {
@@ -18,5 +19,9 @@ class MarketingChannelPresenter: MarketingChannelPresenterProtocol {
         return SessionManager.shared.generateOffers()
     }
     
-    var cart: [CartItem] = []
+    var cart: CartProtocol = Cart()
+    
+    func addToCart(cartItem: CartItem) {
+        cart.add(item: cartItem)
+    }
 }
