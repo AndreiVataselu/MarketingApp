@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 protocol CartDelegate: class {
-    func addToCart(offer: Offer)
+    func addToCart(item: CartItem)
 }
 
 class SelectOfferVC: UIViewController {
@@ -44,11 +44,27 @@ class SelectOfferVC: UIViewController {
     }
     
     @IBAction private func addToCartButtonPressed(_ sender: UIButton) {
-        guard let selectedOffer = marketingChannel?.packages[currentIndex] else {
+        guard let marketingChannel = marketingChannel else {
             return
         }
-        cartDelegate?.addToCart(offer: selectedOffer)
-        dismiss(animated: true, completion: nil)
+        let cartItem = CartItem(channelName: marketingChannel.name, offer: marketingChannel.packages[currentIndex])
+        
+        cartDelegate?.addToCart(item: cartItem)
+        dismissAnimation()
+    }
+    
+    @IBAction private func dismissButtonPressed(_ sender: UIButton) {
+        dismissAnimation()
+    }
+    
+    private func dismissAnimation() {
+        UIView.animate(withDuration: 0.3,
+                              animations: { [weak self] in
+                                self?.view.frame.origin.y = self?.view.frame.height ?? 700
+                   },
+                              completion: { [weak self] _ in
+                               self?.dismiss(animated: true, completion: nil)
+               })
     }
 }
 
@@ -61,7 +77,7 @@ extension SelectOfferVC: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ChannelOffersCVC", for: indexPath) as? ChannelOffersCVC,
             let offer = marketingChannel?.packages[indexPath.row] else {
-            return UICollectionViewCell()
+                return UICollectionViewCell()
         }
         
         cell.configure(offer: offer)
@@ -75,7 +91,7 @@ extension SelectOfferVC: UICollectionViewDelegate, UICollectionViewDataSource {
         
         currentIndex = index
         
-        priceLabel.text = "\(marketingChannel?.packages[currentIndex].price ?? 0)"
+        priceLabel.text = "\(marketingChannel?.packages[currentIndex].price ?? 0) €"
     }
 }
 
