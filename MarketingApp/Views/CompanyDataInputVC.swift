@@ -23,6 +23,9 @@ class CompanyDataInputVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        
         companyEmployeesTF.keyboardType = .numberPad
         companyNameTF.autocorrectionType = .no
         nextButton.backgroundColor = .lightGray

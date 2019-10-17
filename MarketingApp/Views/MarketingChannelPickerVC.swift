@@ -15,6 +15,8 @@ class MarketingChannelPickerVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addCartButton()
+        
+        tableView.tableHeaderView = tableView.getHeaderView(text: "Canalele disponibile pentru tine")
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tableFooterView = UIView(frame: .zero)

@@ -17,7 +17,7 @@
 		F17762CD2357497B00CBE07F /* CartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17762CC2357497B00CBE07F /* CartVC.swift */; };
 		F18E49B72357B28A004A86CE /* CartTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18E49B62357B28A004A86CE /* CartTVC.swift */; };
 		F18E49B92357C07E004A86CE /* ResizingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18E49B82357C07E004A86CE /* ResizingTableView.swift */; };
-		F1940B33234D2E1D008135F1 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1940B32234D2E1D008135F1 /* UIColor.swift */; };
+		F1940B33234D2E1D008135F1 /* UITableViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1940B32234D2E1D008135F1 /* UITableViewExt.swift */; };
 		F1D09889235492E100598119 /* ChannelOffersCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D09888235492E100598119 /* ChannelOffersCVC.swift */; };
 		F1F00D9F2351329C00839D1F /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F00D9E2351329C00839D1F /* SessionManager.swift */; };
 		F1F00DA1235197F500839D1F /* IndicatorsPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F00DA0235197F500839D1F /* IndicatorsPickerVC.swift */; };
@@ -44,7 +44,7 @@
 		F17762CC2357497B00CBE07F /* CartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartVC.swift; sourceTree = "<group>"; };
 		F18E49B62357B28A004A86CE /* CartTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTVC.swift; sourceTree = "<group>"; };
 		F18E49B82357C07E004A86CE /* ResizingTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizingTableView.swift; sourceTree = "<group>"; };
-		F1940B32234D2E1D008135F1 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		F1940B32234D2E1D008135F1 /* UITableViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExt.swift; sourceTree = "<group>"; };
 		F1D09888235492E100598119 /* ChannelOffersCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelOffersCVC.swift; sourceTree = "<group>"; };
 		F1F00D9E2351329C00839D1F /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		F1F00DA0235197F500839D1F /* IndicatorsPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorsPickerVC.swift; sourceTree = "<group>"; };
@@ -158,7 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				F1FDFD41234BBA37000D9584 /* UIViewControllerExt.swift */,
-				F1940B32234D2E1D008135F1 /* UIColor.swift */,
+				F1940B32234D2E1D008135F1 /* UITableViewExt.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -251,7 +251,7 @@
 			files = (
 				F1FDFD3F234BA325000D9584 /* MarketingChannel.swift in Sources */,
 				F1F00DA1235197F500839D1F /* IndicatorsPickerVC.swift in Sources */,
-				F1940B33234D2E1D008135F1 /* UIColor.swift in Sources */,
+				F1940B33234D2E1D008135F1 /* UITableViewExt.swift in Sources */,
 				F15BF550235483CC00B664CE /* SelectOfferVC.swift in Sources */,
 				F17520D62351BE1F00E92EC2 /* ChooseIndicatorTVC.swift in Sources */,
 				F1FDFD28234BA1C3000D9584 /* AppDelegate.swift in Sources */,

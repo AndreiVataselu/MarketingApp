@@ -22,7 +22,7 @@ class IndicatorsPickerVC: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.tableHeaderView = getHeaderView()
+        tableView.tableHeaderView = tableView.getHeaderView(text: "Alege criteriile pentru campania ta de marketing")
         presenter = IndicatorsPickerPresenter(view: self)
     }
     
@@ -37,24 +37,6 @@ class IndicatorsPickerVC: UIViewController {
             return
         }
         cell.selectedCell()
-    }
-    
-    private func getHeaderView() -> UIView {
-        let frame = CGRect(x: 0, y: 0, width: tableView.frame.width, height: 100)
-        let view = UIView(frame: frame)
-        
-        let label = UILabel(frame: view.bounds)
-        label.text = "Alege criteriile pentru campania ta de marketing"
-        label.font = .systemFont(ofSize: 30, weight: .thin)
-        label.numberOfLines = 0
-        
-        view.addSubview(label)
-        
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 25).isActive = true
-        label.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -25).isActive = true
-        
-        return view
     }
 }
 
